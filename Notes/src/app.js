@@ -26,10 +26,9 @@ app.delete('/notes/:index', (req,res) =>{
 
     const index = req.params.index
 
-
     delete notes[index]
     res.status(200).json({
-        message: "deleted succesfully"
+        message : "notes deleted suceesfully "
     })
 })
 
@@ -40,9 +39,9 @@ app.patch('/notes/:index', (req,res) =>{
 
     notes[index].description = description
     res.status(200).json({
-        message : "notes updated successfully "
+        message : "note updated successfully "
     })
-
 })
+
 
 module.exports = app
